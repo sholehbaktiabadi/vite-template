@@ -1,34 +1,47 @@
-import React from "react";
+import React, { useState } from "react";
 
 function Navbar() {
+
+  const [toogleIcon, setToogleIcon] = useState('fa-solid fa-bars cursor-pointer text-2xl md:hidden')
+
+  const onToggleMenu = (event: React.MouseEvent<HTMLElement>) => {
+    toogleIcon == 'fa-solid fa-bars cursor-pointer text-2xl md:hidden' ? 
+    setToogleIcon('fa-solid fa-xmark cursor-pointer text-2xl md:hidden'):
+    setToogleIcon('fa-solid fa-bars cursor-pointer text-2xl md:hidden')
+    const navlink = document.querySelector('.nav-links')
+    navlink?.classList.toggle('top-[3%]')
+  }
+
   return (
     <>
-      <nav className="flex py-10 bg-gradient-to-r from-slate-700 to-slate-800">
-        <div className="container">
-          <div className="flex flex-row">
-            <div className="basis-1/2 text-start">
-              <a href="" className="text-xl rounded-lg text-slate-50 font-medium px-5 py-3 hover:bg-slate-200">
-                Logo
-              </a>
-            </div>
-            <div className="basis-1/2 text-end">
-              {[
-                ["Home", "/Home"],
-                ["Tentang Kami", "/Tentang Kami"],
-                ["Service", "/Service"],
-                ["Contact", "/Contact"],
-              ].map(([title, url]) => (
-                <a
-                  href={url}
-                  className="text-xl rounded-lg px-5 py-3 mx-2 my-10 text-slate-50 font-medium hover:bg-slate-100 hover:text-slate-900"
-                >
-                  {title}
-                </a>
-              ))}
-            </div>
-          </div>
+      <div className="container-lg bg-slate-200">
+      <nav className="flex justify-between items-center w-[80%] mx-auto">
+        <div>
+          <p>Logos</p>
         </div>
+        <div className="nav-links duration-500 md:static absolute md:min-h-fit min-h-[25vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5">
+          <ul className="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-4">
+            <li>
+              <a href="#" className="hover:text-gray-500">Home</a>
+            </li>
+            <li>
+              <a href="#" className="hover:text-gray-500">Service</a>
+            </li>
+            <li>
+              <a href="#" className="hover:text-gray-500">About</a>
+            </li>
+            <li>
+              <a href="#" className="hover:text-gray-500">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <div className="flex items-center gap-6">
+          <button className="bg-slate-200 px-5 py-2 rounded-full">Sign In</button>
+          <i onClick={onToggleMenu} className={toogleIcon}></i>
+        </div>
+
       </nav>
+      </div>
     </>
   );
 }
