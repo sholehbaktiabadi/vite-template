@@ -8,7 +8,7 @@ function Home() {
     return (
     <>
       <div className="container mx-auto h-screen">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 m-8 justify-center text-center">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 m-8 justify-center text-center z-0">
             {
                 data.map(res => 
                   <div className="bg-slate-100 m-2 p-8 rounded-[15px] drop-shadow-lg">

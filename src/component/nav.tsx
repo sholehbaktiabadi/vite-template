@@ -17,10 +17,10 @@ function Navbar() {
       <div className="container-lg bg-slate-200">
       <nav className="flex justify-between items-center w-[80%] mx-auto">
         <div>
-          <p>Logos</p>
+          <p className="my-5 md:m-8">Logos</p>
         </div>
-        <div className="nav-links duration-500 md:static absolute md:min-h-fit min-h-[25vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5">
-          <ul className="flex md:flex-row flex-col md:items-center md:gap-[4vw] gap-4">
+        <div className="nav-links duration-500 md:static absolute md:min-h-fit min-h-[30vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5 my-5 z-10 bg-slate-200">
+          <ul className="flex md:flex-row flex-col md:items-center md:gap-[3vw] gap-4">
             <li>
               <a href="#" className="hover:text-gray-500">Home</a>
             </li>
