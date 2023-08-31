@@ -11,7 +11,7 @@ function Home() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 m-8 justify-center text-center z-0">
             {
                 data.map(res => 
-                  <div className="bg-slate-100 m-2 p-8 rounded-[15px] drop-shadow-lg">
+                  <div className="bg-slate-300 m-2 p-8 rounded-[15px] drop-shadow-lg">
                     <p className="font-medium">{res.title}</p>
                     <p className="font-reguler">{res.subtitle}</p>
                     <p className="font-light">{res.content}</p>
