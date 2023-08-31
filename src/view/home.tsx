@@ -7,7 +7,7 @@ function Home() {
     const data = [{title,subtitle,content}, {title,subtitle,content}, {title,subtitle,content}, {title,subtitle,content}, {title,subtitle,content}, {title,subtitle,content}]
     return (
     <>
-      <div className="container mx-auto h-screen">
+      <div className="container mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 m-8 justify-center text-center z-0">
             {
                 data.map(res => 
