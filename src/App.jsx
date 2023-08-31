@@ -1,11 +1,16 @@
+import './Index.css'
+import { BrowserRouter, Route, Routes } from "react-router-dom"
+import Home from './view/home'
+import Layout from './layout/layout'
+
 function App() {
 
   return (
-    <>
-      <p>
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout props={<Home/>} />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
